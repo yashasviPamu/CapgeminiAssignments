@@ -179,3 +179,4 @@ db.comments.find({username:"ScumbagSteve"})
 
 
 Find all comments belonging to the post "Reports a bug in your code"--
+db.posts.aggregate([ {$match: { title: 'Reports a bug in your code' } }, {$lookup: {from: 'comments', localField: '_id', foreignField: 'post', as: 'comments'} } ]).pretty();
