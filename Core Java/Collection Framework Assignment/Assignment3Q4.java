@@ -71,7 +71,7 @@ class DateClass {
             return false; 
         } 
         DateClass other = (DateClass)o; 
-        if (this.date != other.date && this.month!=other.month) { 
+        if (this.date == other.date && this.month==other.month) { 
             return false; 
         } 
         return true; 
@@ -107,7 +107,7 @@ public class Assignment3Q4 {
     	HashMap<DateClass, String> dob = new HashMap<>();
     	DateClass one=new DateClass(28,2,1999);
     	DateClass two=new DateClass(14,6,1989);
-    	DateClass three=new DateClass(28,4,1980);
+    	DateClass three=new DateClass(28,2,1998);
     	DateClass four=new DateClass(20,1,1999);
     	
     	dob.put(one, one.getDOB());
@@ -117,7 +117,25 @@ public class Assignment3Q4 {
     	
     	String employeeName="Arun,Bharath,Chandra,Dinesh";
     	Assignment3Q4 answer=new Assignment3Q4();
-    	answer.getEmployee(dob, employeeName);
     	
+    	for(Map.Entry<DateClass,String> entry: dob.entrySet())
+        {
+    		for(Map.Entry<DateClass, String> entry1: dob.entrySet())
+    		{
+    			if (!entry.getKey().equals(entry1.getKey())) 
+    	           {
+    	             if (!entry.getValue().equals(entry1.getValue())) {
+    	            	 answer.getEmployee(dob, employeeName);
+    	            	 break;
+    	             }
+    	             else
+    	             {
+    	            	 System.exit(0);
+    	             }
+    	             break;
+    	           }
+    			break;
+    		}
+        }
     }
 }
