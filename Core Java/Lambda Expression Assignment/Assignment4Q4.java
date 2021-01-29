@@ -6,7 +6,7 @@ import java.util.function.Predicate;
 
 public class Assignment4Q4 {
     public ArrayList<String> removeOddLength(ArrayList<String> employeeList){
-    	Predicate<String> pre = e -> e.length()/2==1; 
+    	Predicate<String> pre = e -> e.length()%2==1; 
     	employeeList.removeIf(pre);  	
     	return employeeList;
     }
