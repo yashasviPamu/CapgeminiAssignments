@@ -9,8 +9,8 @@ function person(fname, lname, age, skills, dateofbirth, address, married, profes
     this.married = married;
     this.profession = profession;
 }
-person1=new person("Naga","Sai",22,"c","2/1/1999",{city:"hyderabad",pincode:"500060"},"false","analyst");
-person2=new person("Chinmay","Goud",27,"HTML","8/12/1993",{city:"Ameerpet",pincode:"500038"},"false","Sr Cloud Engineer");
+person1=new person("nikhil","goud",22,["c"],"24/10/1996",{city:"hyderabad",pincode:"521185"},"false","sr analyst");
+person2=new person("harish","chinna",21,"HTML","08/06/1997",{city:"Ameerpet",pincode:"500038"},"false","jr analyst");
 
 print=function()
 {
