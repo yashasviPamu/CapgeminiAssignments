@@ -12,14 +12,10 @@ function person(fname,lname,age,skills,dateofbirth,address,married,profession)
 amithab=new person("amithab","bachan",22,["c"],"24/10/1996",{city:"hyderabad",pincode:"521185"},"false","sr analyst")
 abhisheik=new person("abhisheik",21,"HTML","08/06/1997","false","jr analyst")
 var abhisheik=Object.create(amithab);
-Aditya=new person("Aditya",6,"null","08/5/2006","false","toddler");
-var Aditya=Object.create(amithab,abhisheik);
 
 print=function()
 {
- console.log("amithab: ",amithab);
- console.log("abhisheik last name shared: ",abhisheik.lname);
- console.log("abhisheik address: ",abhisheik.address);
- console.log("Aditya last name shared:",Aditya.lname);
- console.log("Aditya address:",Aditya.address);
+ console.log(amithab);
+ console.log(abhisheik.lname);
+ console.log(abhisheik.address);
 }();
